@@ -88,4 +88,11 @@ public class DatabaseHandler extends SQLiteOpenHelper{
         // return notes list
         return visitors;
     }
+
+    public int deleteVisitor (String id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        int result= db.delete(TABLE_VISITORS, KEY_VISITOR_ID+"=?",new String[]{id});
+        return result;
+    }
 }
