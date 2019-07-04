@@ -1,8 +1,18 @@
 package com.sveltoz.sqlitedemoapplication;
 
 public class Visitor {
+    int id;
 
     String name,language,email,number,date;
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;

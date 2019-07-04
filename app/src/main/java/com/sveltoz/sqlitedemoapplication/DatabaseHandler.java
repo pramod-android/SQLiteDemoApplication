@@ -75,6 +75,7 @@ public class DatabaseHandler extends SQLiteOpenHelper{
         if (cursor.moveToFirst()) {
             do {
                 Visitor visitor = new Visitor();
+                visitor.setId(cursor.getInt(cursor.getColumnIndex(KEY_VISITOR_ID)));
                 visitor.setName(cursor.getString(cursor.getColumnIndex(KEY_VISITOR_NAME)));
                 visitor.setLanguage(cursor.getString(cursor.getColumnIndex(KEY_PROGRAM_LANGUAGE)));
                 visitor.setEmail(cursor.getString(cursor.getColumnIndex(KEY_EMAIL)));
